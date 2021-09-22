@@ -69,8 +69,8 @@ export class PersonComponent implements OnInit {
     )
   }
 
-  onDelete(pe: any) {
-    this.personService.deletePerson(pe._id)
+  onDelete(pers: any) {
+    this.personService.deletePerson(pers._id)
       .subscribe(
         (res) => {
           console.log("deleted")
