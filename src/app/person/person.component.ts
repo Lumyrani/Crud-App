@@ -73,6 +73,7 @@ export class PersonComponent implements OnInit {
 
 
     }
+    this.reset()
 
   }
   loadpersons() {
@@ -87,7 +88,7 @@ export class PersonComponent implements OnInit {
   //to delete data with given form data id 
   onDelete(pers: any) {
     this.personService.deletePerson(pers._id)
-        .subscribe((res) => {
+      .subscribe((res) => {
         console.log("deleted")
         alert('deleted'), this.loadpersons()
       })
